@@ -44,8 +44,7 @@ export default function Profile() {
 
     return (
         <> {auth.currentUser ? <div className='profile'>
-            <Avatar src={ getMetadata(imageRef).then((metadata) => { })
-                .catch((error) => { })} sx={{ width: 150, height: 150 }} />
+            <Avatar src={url} sx={{ width: 150, height: 150 }} />
             <input className='fileUpload' type="file" onChange={handleProfilePic} />
             <button type="submit" onClick={handleSubmit}> Submit </button>
         </div> : <p> You Are Not Signed In!</p>} </>

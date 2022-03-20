@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     font-family: 'Josefin Sans';
-    background-color: rgb(121, 86, 22);
+    background-color: rgb(198, 199, 218);
     z-index: 999;   
 }
 
@@ -28,7 +28,7 @@
 .topCenter {
     flex: 60%;
     display: flex;
-    justify-content: center;   
+    justify-content: center;  
 }
 
 .topIcon{
@@ -45,13 +45,22 @@
     cursor: pointer;
 
 }
-.topImg{
+.topRightImg{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
     margin: 5px;
+}
+
+.topLeftImg{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-top: 13px;
 }
 
 .topCenterList{
@@ -64,14 +73,14 @@
 }
 
 .topListItem{
-    margin: 10px;
+    margin: 15px;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     cursor: pointer;
 }
 
 .topListItem:hover{
     background-color: honeydew;
-    padding: 5px;
+    padding: 4px;
     border-radius: 5px;
 }

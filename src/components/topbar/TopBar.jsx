@@ -3,16 +3,18 @@ import "./topbar.css";
 import { Link} from 'react-router-dom';
 import { auth } from "../../firebase";
 import { signOut, onAuthStateChanged } from "firebase/auth"
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { urlContext } from "../../context";
 
 
-export default function TopBar(props) {
+export default function TopBar() {
+
+    const {url, setUrl} = useContext(urlContext);
+    const [user, setUser] = useState([]);
 
     const handleSignOut = () => {
         signOut(auth).catch((error) => alert(error.message));
     }
-    
-    const [user, setUser] = useState([]);
     
     useEffect(() => {
         auth.onAuthStateChanged((user) => {
@@ -22,6 +24,7 @@ export default function TopBar(props) {
 
     return <div className="top">
         <div className="topLeft">
+            <img className="topLeftImg" src="https://i.ibb.co/Kb324Wy/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-PGBG2-7.png"/>
             <i className="topIcon fab fa-instagram-square"></i>
             <i className="topIcon fab fa-twitter-square"></i>
             <i className="topIcon fab fa-facebook-square"></i>
@@ -30,16 +33,16 @@ export default function TopBar(props) {
             <ul className="topCenterList">
                 <Link to="/" style={{ textDecoration: 'none', color:'inherit' }} className="topListItem">HOME</Link>
                 <Link to="/blog" style={{ textDecoration: 'none', color:'inherit' }} className="topListItem">BLOG</Link>
-                <a style={{ textDecoration: 'none', color:'inherit' }}  href="https://www.youtube.com/channel/UCEnP8E_-fWRKPGxp48dDUkg" target="_blank"> <li className="topListItem">VIDEOS</li> </a>
-                <li className="topListItem">CONTACT</li>
+                <Link to="/videos" style={{ textDecoration: 'none', color:'inherit' }} className="topListItem">VIDEOS</Link>
+                <Link to="/contact" style={{ textDecoration: 'none', color:'inherit' }} className="topListItem">CONTACT</Link>
                 { auth.currentUser ? (<> <Link to="/profile" style={{ textDecoration: 'none', color:'inherit' }} className="topListItem">PROFILE</Link>
- <li onClick={handleSignOut} className="topListItem">SIGN OUT</li></>) : (
+                <li onClick={handleSignOut} className="topListItem">SIGN OUT</li></>) : (
                 <Link to="/login" style={{ textDecoration: 'none', color:'inherit' }} className="topListItem">LOGIN</Link>)
                 }
             </ul>
         </div>
         <div className="topRight"> 
-        <img className="topImg"src={props.profileUrl} />
+        <img className="topRightImg"src={url} />
         <i className="topSearchIcon fas fa-search"></i>
 
          </div>

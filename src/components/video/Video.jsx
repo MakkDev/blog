@@ -5,20 +5,20 @@ import "./video.css"
 export default function Video(props) {
     return <>
 
-        <div className="post">
+        <div className="videoPost">
             <a href={props.vidUrl} target="_blank">
-                <img className="postImg" src={props.imgUrl} />
+                <img className="videoPostImg" src={props.imgUrl} />
             </a>
 
-            <div className="postInfo">
-                <div className="postCats">
-                    <span className="postCat"> {props.postCategory}</span>
+            <div className="videoPostInfo">
+                <div className="videoPostCats">
+                    <span className="videoPostCat"> {props.postCategory}</span>
                 </div>
                 <hr />
-                <a href={props.vidUrl} className="postTitle" style={{ textDecoration: 'none', color: 'inherit' }} target="_blank">{props.postTitle}</a>
-                <span className="postDate">1 Hour Ago</span>
+                <a href={props.vidUrl} className="videoPostTitle" style={{ textDecoration: 'none', color: 'inherit' }} target="_blank">{props.postTitle}</a>
+                <span className="videoPostDate">1 Hour Ago</span>
             </div>
-            <p className="postDesc">
+            <p className="videoPostDesc">
                 {props.postDescription}
             </p>
             

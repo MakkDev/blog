@@ -24,6 +24,8 @@
 font-size: 14px;
 color: lightcoral;
 font-weight: 500;
+text-align: center;
+line-height: 1.6;
 }
 
 .postCat{
@@ -56,4 +58,35 @@ margin: 5px;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     margin-top: 15px;
+}
+
+@media (max-width:1226px) {
+    .post{
+        display: flex;
+        width: 240px;
+        margin: 25px 25px 40px 25px;
+        flex-direction: column;
+        
+    }
+
+}
+@media (max-width:854px) {
+    .post{
+        display: flex;
+        width: 190px;
+        margin: 25px 25px 40px 25px;
+        flex-direction: column;
+        
+    }
+
+}
+@media (max-width:496px) {
+    .post{
+        display: flex;
+        width: 310px;
+        margin: 25px 0px 40px 0px;
+        flex-direction: column;
+        
+    }
+
 }

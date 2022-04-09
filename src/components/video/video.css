@@ -1,4 +1,4 @@
-.post{
+.videoPost{
     display: flex;
     width: 385px;
     margin: 25px 25px 40px 25px;
@@ -6,13 +6,13 @@
     
 }
 
-.postImg{
+.videoPostImg{
  width: 100%;
  border-radius: 20px;
  object-fit: cover;
 }
 
-.postInfo{
+.videoPostInfo{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,24 +20,24 @@
 
 }
 
-.postCats{
+.videoPostCats{
 font-size: 14px;
 color: lightcoral;
 font-weight: 500;
 }
 
-.postCat{
+.videoPostCat{
 margin: 5px;
 }
 
-.postDate{
+.videoPostDate{
     font-size: 11px;
     font-family: Righteous;
     margin: 5px;
     color: gray;
 }
 
-.postTitle{
+.videoPostTitle{
     font-size: 24px;
     margin: 5px;
     font-family: Open Sans;
@@ -46,7 +46,7 @@ margin: 5px;
     
 }
 
-.postDesc{
+.videoPostDesc{
     font-family: Verdana, sans-serif;
     font-size: 14px;
     color: 444;
@@ -59,14 +59,34 @@ margin: 5px;
     margin-top: 15px;
 }
 
-@media (max-width:760px) {
-    .post{
+@media (max-width:1226px) {
+    .videoPost{
         display: flex;
-        width: 285px;
+        width: 240px;
         margin: 25px 25px 40px 25px;
         flex-direction: column;
         
     }
-    
-    
+
+}
+@media (max-width:854px) {
+    .videoPost{
+        display: flex;
+        width: 220px;
+        margin: 25px 25px 40px 25px;
+        flex-direction: column;
+        
+    }
+
+}
+@media (max-width:556px) {
+    .videoPost{
+        display: flex;
+        width: 310px;
+        margin: 25px 0px 40px 0px;
+        flex-direction: column;
+        
+        
+    }
+
 }

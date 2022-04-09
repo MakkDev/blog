@@ -11,7 +11,7 @@ export default function Contact() {
                         <i className="writeIcon fa-solid fa-plus"></i>
                     </label>
                     <input id='fileInput' type="file" style={{ display: "none" }} />
-                    <input className='textInputTitle' placeholder='Title' type="text" autoFocus={true} />
+                    <input className='textInputTitle' placeholder='Subject' type="text" autoFocus={true} />
                 </div>
                 <div className='writeFormGroup'>
                     <textarea className='textInput' placeholder="How Can We Help You?" type="text"></textarea>

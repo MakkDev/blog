@@ -25,9 +25,12 @@ export default function TopBar() {
     return <div className="top">
         <div className="topLeft">
             <img className="topLeftImg" src="https://i.ibb.co/Kb324Wy/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-PGBG2-7.png"/>
+            <div className="topIcons">
             <i className="topIcon fab fa-instagram-square"></i>
             <i className="topIcon fab fa-twitter-square"></i>
-            <i className="topIcon fab fa-facebook-square"></i>
+            <i className="topIcon fab fa-github-square"></i>
+            </div>
+            
         </div>
         <div className="topCenter"> 
             <ul className="topCenterList">

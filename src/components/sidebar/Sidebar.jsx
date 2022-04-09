@@ -3,8 +3,8 @@ export default function Sidebar() {
   return <div className="sidebar">
       <div className="sidebarItem">
           <span className="sidebarTitle"> ABOUT US</span>
-              <img src= "https://media.istockphoto.com/photos/smiling-woman-posing-in-glasses-picture-id876629044?k=20&m=876629044&s=170667a&w=0&h=91nOkZ-Qbfr39hCxlO8Bt0O2QwqzRibf0wWx6CMGjqM="/>         
-            <p className="sidebarDesc">We are a group of young men educating the world on Crypto, DeFi, and all things blockchain tech related!</p>
+              <img className="sidebarImg" src= "https://media.istockphoto.com/photos/smiling-woman-posing-in-glasses-picture-id876629044?k=20&m=876629044&s=170667a&w=0&h=91nOkZ-Qbfr39hCxlO8Bt0O2QwqzRibf0wWx6CMGjqM="/>         
+            <p className="sidebarDesc">We are a group of blockchain enthusiasts educating the world on Crypto, DeFi, and all things blockchain tech related!</p>
       </div>
       <div className="sidebarItem">
           <hr/>

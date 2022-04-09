@@ -4,18 +4,18 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import "./blog.css"
 export default function Blog() {
   return <>
-  
-  <Link className="buttonNewPost" to="/write">
+
+  {/* <Link className="buttonNewPost" to="/write">
     <button className="button">
     <i class="buttonIcon fa-solid fa-pen-to-square"></i>
     <b> New Post </b>
     </button>
-    </Link>
-
+    </Link> */}
+  
   <div className="blog">
     
       <Posts/>
      
       <Sidebar/> </div> 
-     </>
+     </> 
 }

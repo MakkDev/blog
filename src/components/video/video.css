@@ -58,3 +58,15 @@ margin: 5px;
     -webkit-box-orient: vertical;
     margin-top: 15px;
 }
+
+@media (max-width:760px) {
+    .post{
+        display: flex;
+        width: 285px;
+        margin: 25px 25px 40px 25px;
+        flex-direction: column;
+        
+    }
+    
+    
+}

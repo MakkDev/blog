@@ -5,7 +5,7 @@ import Video from '../video/Video'
 export default function Videos() {
   return (
     
-    <div className='videos'> 
+    <div className="videos"> 
     <Video postCategory="Blockchain Tech" postTitle="What Are Smart Contracts?"  vidUrl="https://youtu.be/KjbUS_co2AM" imgUrl={"/images/whatRSmartCtcs.png"} />
     <Video postCategory="Decentralized Finance" postTitle="Why Most Farm Tokens Eventually Trend Toward Zero." vidUrl="https://youtu.be/unik6S8IZvY" imgUrl={"/images/whyFarmsZero.png"} />
     <Video postCategory="Blockchain Tech" postTitle="What Is The EVM (Ethereum Virtual Machine)?" vidUrl="https://youtu.be/XTlT3I-Iy5o" imgUrl={"/images/whatsEVM.png"} />

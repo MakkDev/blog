@@ -26,9 +26,9 @@ export default function TopBar() {
         <div className="topLeft">
             <img className="topLeftImg" src="https://i.ibb.co/Kb324Wy/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-PGBG2-7.png"/>
             <div className="topIcons">
-            <i className="topIcon fab fa-instagram-square"></i>
-            <i className="topIcon fab fa-twitter-square"></i>
-            <i className="topIcon fab fa-github-square"></i>
+            <a style={{ textDecoration: 'none', color:'inherit' }} href="https://www.instagram.com/makk.eth/" target="_blank"> <i className="topIcon fab fa-instagram-square"/> </a>
+            <a style={{ textDecoration: 'none', color:'inherit' }} href="https://www.youtube.com/channel/UCEnP8E_-fWRKPGxp48dDUkg" target="_blank"> <i className="topIcon fab fa-youtube-square"></i> </a>
+            <a style={{ textDecoration: 'none', color:'inherit' }} href="https://github.com/MakkDev" target="_blank"> <i className="topIcon fab fa-github-square"></i> </a>
             </div>
             
         </div>

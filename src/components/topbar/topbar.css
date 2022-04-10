@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     font-family: 'Josefin Sans';
-    background-color: rgb(198, 199, 218);
+    background-color: #53c28bc9;
     z-index: 999;   
 }
 
@@ -74,6 +74,7 @@
     display: flex;
     justify-content: center;
     margin: 0;
+    margin-left: -150px;
     padding: 0;
     list-style: none;
     align-items: center;
@@ -102,10 +103,19 @@
         display: flex;
         align-items: center;
         font-family: 'Josefin Sans';
-        background-color: rgb(218, 198, 203);
+        background-color: #53c28bc9;
         z-index: 999;   
     }
 
+    .topCenterList{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-items: center;
+        
+    }
     .topListItem{
         margin: 15px;
         font-size: 100%;
@@ -142,7 +152,7 @@
         display: flex;
         align-items: center;
         font-family: 'Josefin Sans';
-        background-color: rgb(66, 110, 146);
+        background-color: #53c28bc9;
         z-index: 999;   
     }
 
@@ -191,7 +201,7 @@
         display: flex;
         align-items: center;
         font-family: 'Josefin Sans';
-        background-color: rgb(214, 231, 58);
+        background-color: #53c28bc9;
         z-index: 999;   
     }
 
@@ -240,7 +250,7 @@
         display: flex;
         align-items: center;
         font-family: 'Josefin Sans';
-        background-color: rgb(84, 58, 231);
+        background-color: #53c28bc9;
         z-index: 999;   
     }
 
@@ -295,7 +305,7 @@
         display: flex;
         align-items: center;
         font-family: 'Josefin Sans';
-        background-color: rgb(96, 95, 102);
+        background-color: #53c28bc9;
         z-index: 999;   
     }
 

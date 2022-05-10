@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     font-family: 'Josefin Sans';
-    background-color: #53c28bc9;
+    background-color: #53c28b;
     z-index: 999;   
 }
 
@@ -15,7 +15,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
     
 }
 
@@ -29,12 +28,13 @@
 .topCenter {
     flex: 60%;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
+    margin-right: 140px;
 }
 
 .topIcon{
     font-size: 30px;
-    margin: 6px;
+    margin: 5px;
     color: #444;
     cursor: pointer;
 
@@ -94,6 +94,24 @@
     border-radius: 5px;
 }
 
+@media (max-width:1170px) {
+    
+    .topListItem{
+        margin: 15px;
+        font-size: 100%;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .topIcon{
+        font-size: 27px;
+        margin: 5px;
+        color: #444;
+        cursor: pointer;
+    
+    }
+
+}
 @media (max-width:1050px) {
     .top{
         width: 100%;
@@ -103,7 +121,7 @@
         display: flex;
         align-items: center;
         font-family: 'Josefin Sans';
-        background-color: #53c28bc9;
+        background-color: #53c28b;
         z-index: 999;   
     }
 
@@ -116,6 +134,14 @@
         align-items: center;
         
     }
+
+    .topCenter {
+        flex: 60%;
+        display: flex;
+        justify-content: center;
+        margin-right: 0px;
+    }
+
     .topListItem{
         margin: 15px;
         font-size: 100%;
@@ -152,8 +178,16 @@
         display: flex;
         align-items: center;
         font-family: 'Josefin Sans';
-        background-color: #53c28bc9;
+        background-color: #53c28b;
         z-index: 999;   
+    }
+
+    .topCenter {
+        flex: 60%;
+        display: flex;
+        justify-content: center;
+        margin-right: 0px;
+
     }
 
     .topListItem{
@@ -201,8 +235,16 @@
         display: flex;
         align-items: center;
         font-family: 'Josefin Sans';
-        background-color: #53c28bc9;
+        background-color: #53c28b;
         z-index: 999;   
+    }
+
+    .topCenter {
+        flex: 60%;
+        display: flex;
+        justify-content: center;
+        margin-right: 0px;
+
     }
 
     .topListItem{
@@ -250,8 +292,16 @@
         display: flex;
         align-items: center;
         font-family: 'Josefin Sans';
-        background-color: #53c28bc9;
+        background-color: #53c28b;
         z-index: 999;   
+    }
+
+    .topCenter {
+        flex: 60%;
+        display: flex;
+        justify-content: center;
+        margin-right: 0px;
+
     }
 
     .topListItem{
@@ -305,7 +355,7 @@
         display: flex;
         align-items: center;
         font-family: 'Josefin Sans';
-        background-color: #53c28bc9;
+        background-color: #53c28b;
         z-index: 999;   
     }
 
@@ -314,6 +364,14 @@
         font-size: 9.5px;
         font-weight:600;
         cursor: pointer;
+    }
+
+    .topCenter {
+        flex: 60%;
+        display: flex;
+        justify-content: center;
+        margin-right: -10px;
+
     }
 
     .topLeftImg{
@@ -335,8 +393,8 @@
     }
 
     .topIcons{
-        width: 40px;
-        margin-left: 4px;
+        width: 30px;
+        margin-left: 10px;
         padding-left: -10px;
 
     }
@@ -345,7 +403,7 @@
         display: flex;
         justify-content: center;
         margin: 0;
-        margin-left: -2px;
+        margin-left: -25px;
         padding: 0;
         list-style: none;
         align-items: center;

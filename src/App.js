@@ -8,7 +8,7 @@ import Write from "./pages/write/Write";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import {useContext, useState} from 'react';
-import { urlContext } from "./context";
+import { urlContext, blogUrlContext } from "./context";
 import VideosPage from "./pages/videosPage/VideosPage";
 import Contact from "./pages/contact/Contact";
 
@@ -17,14 +17,17 @@ import Contact from "./pages/contact/Contact";
 
 function App() {
   const [url, setUrl] = useState([]);
+  const [blogUrl, setBlogUrl] = useState([]);
+
   return (
     <>
+      <blogUrlContext.Provider value={{blogUrl, setBlogUrl}}> 
       <urlContext.Provider value={{url, setUrl}}> 
       <TopBar />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/blog" element={<Blog/>} />
-        <Route path="/single" element={<Single/>} />
+        <Route path="/single/:blogID" element={<Single/>} />
         <Route path="/write" element={<Write/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/profile" element={<Profile/>} />
@@ -32,6 +35,7 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
       </Routes>
       </urlContext.Provider>
+      </blogUrlContext.Provider>
     </>
   );
 }

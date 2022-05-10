@@ -28,7 +28,7 @@ export default function Profile() {
 
 
     const handleSubmit = () => {
-        const imageRef = ref(storage, "/profilePics/" + user.uid + "profilePic")
+        const imageRef = ref(storage, "/profilePics/" + user.uid + "-profilePic")
         uploadBytes(imageRef, profilePic).then(() => {
             getDownloadURL(imageRef).then((url) => {
                 setUrl(url);
@@ -39,8 +39,6 @@ export default function Profile() {
             alert(error.message)
         });
     }
-
-    const imageRef = ref(storage, "/profilePics/" + user.uid + "profilePic")
 
     return (
         <> {auth.currentUser ? <div className='profile'>

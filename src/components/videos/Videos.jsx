@@ -11,6 +11,7 @@ export default function Videos() {
     <Video postCategory="Blockchain Tech" postTitle="What Is The EVM (Ethereum Virtual Machine)?" vidUrl="https://youtu.be/XTlT3I-Iy5o" imgUrl={"/images/whatsEVM.png"} />
     <Video postCategory="Blockchain Tech" postTitle="What Is Ethereum Gas + Gwei?" vidUrl="https://youtu.be/ug0UE-NyYhQ" imgUrl={"/images/WhatisGas.png"} />
     <Video postCategory="Decentralized Finance" postTitle="Common Yield Farming Mistakes" vidUrl="https://www.youtube.com/watch?v=aGdPi4Itz_Q&t=7s" imgUrl={"/images/farmingMistakes.png"} />
+    <Video postCategory="Blockchain Tech" postTitle="Hot Wallets vs Cold Wallets? Crypto Wallets Explained." vidUrl="https://www.youtube.com/watch?v=E5aIUEc5ZeQ" imgUrl={"/images/blogHotvsColdthumbnail.png"} />
     </div>
     
     

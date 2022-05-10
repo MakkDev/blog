@@ -2,8 +2,12 @@ import "./login.css"
 import { useEffect, useState } from 'react'
 import { signInWithEmailAndPassword, onAuthStateChanged, createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../../firebase";
-import {Link, } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import Blog from "../blog/Blog";
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+
+
 
 
 export default function Login() {
@@ -46,28 +50,35 @@ export default function Login() {
         signOut(auth).catch((error) => alert(error.message));
     }
 
-    
+
 
     return (
         <div className='loginPage'>
-            {auth.currentUser ? <div> <Blog/> </div> : <>
+            {auth.currentUser ? <div> <Blog /> </div> : <>
                 {registering ? (<> <h1> Registering! </h1>
                     Email:
                     <input type="email" value={email} onChange={handleEmailChange} className="login" />
                     Password:
                     <input type="password" value={password} onChange={handlePasswordChange} className="login" />
+                    <Stack direction="row" spacing={2}>
+                        <Button variant="contained" onClick={register}>Register</Button>
+                        <Button variant="contained" color="error" onClick={() => setRegistering(false)}> X</Button>
+                    </Stack>
 
-                    <button onClick={register}>Register</button>
-                    <button onClick={() => setRegistering(false)}> X</button>
 
                 </>) : (<> <h1>Welcome!</h1>
                     Email:
                     <input type="email" value={email} onChange={handleEmailChange} className="login" />
                     Password:
                     <input type="password" value={password} onChange={handlePasswordChange} className="login" />
+                    <Stack direction="row" spacing={2}> 
+                        <Button className="regbutton" variant="outlined" type="submit" onClick={signIn} >
+                        Login </Button>
+                        <Button className="regbutton" variant="contained" onClick={() => setRegistering(true)}>
+                        Register </Button>
+                    </Stack>
+                </>
 
-                    <button type="submit" onClick={signIn} >Login</button>
-                    <button onClick={() => setRegistering(true)}>Register</button> </>
 
                 )}
             </>}

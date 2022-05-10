@@ -16,7 +16,7 @@ export default function Video(props) {
                 </div>
                 <hr />
                 <a href={props.vidUrl} className="videoPostTitle" style={{ textDecoration: 'none', color: 'inherit' }} target="_blank">{props.postTitle}</a>
-                <span className="videoPostDate">1 Hour Ago</span>
+                <span className="videoPostDate">04-10-2022</span>
             </div>
             <p className="videoPostDesc">
                 {props.postDescription}

@@ -1,11 +1,17 @@
 import React from 'react'
 import "./contact.css"
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Contact() {
+
+
+  let navigate = useNavigate();
+
   return (
     <>
         <div className='write'>
-            <form className='writeForm'>
                 <div className='writeFormGroup'>
                     <label htmlFor="fileInput">
                         <i className="writeIcon fa-solid fa-plus"></i>
@@ -17,9 +23,10 @@ export default function Contact() {
                     <textarea className='textInput' placeholder="How Can We Help You?" type="text"></textarea>
                                   
                 </div>
-                <button type='submit'> Submit </button>  
+                <Button onClick={() => {navigate("/"); alert("Successfully Submitted!")}} color="success" variant="contained" > Submit </Button>
                 
-            </form>
+                
+            
             
         </div>
         

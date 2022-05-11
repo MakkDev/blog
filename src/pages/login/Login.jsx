@@ -9,7 +9,6 @@ import Stack from '@mui/material/Stack';
 
 
 
-
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -57,7 +56,10 @@ export default function Login() {
             {auth.currentUser ? <div> <Blog /> </div> : <>
                 {registering ? (<> <h1> Registering! </h1>
                     Email:
-                    <input type="email" value={email} onChange={handleEmailChange} className="login" />
+                    <input onKeyPress= {(event) => {
+            if (event.key === '13') {
+              console.log('Enter key pressed');            }
+    }} value={email} onChange={handleEmailChange} className="login" />
                     Password:
                     <input type="password" value={password} onChange={handlePasswordChange} className="login" />
                     <Stack direction="row" spacing={2}>

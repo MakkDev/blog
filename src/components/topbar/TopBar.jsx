@@ -38,10 +38,9 @@ export default function TopBar() {
                 <Link to="/blog" style={{ textDecoration: 'none', color: 'inherit' }} className="topListItem">BLOG</Link>
                 <Link to="/videos" style={{ textDecoration: 'none', color: 'inherit' }} className="topListItem">VIDEOS</Link>
                 <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }} className="topListItem">CONTACT</Link>
+                <a  style={{ textDecoration: 'none', color: 'inherit' }} href="https://github.com/MakkDev" target="_blank" className="topListItem">GITHUB</a>
                 {auth.currentUser ? (<>
-                    <a  style={{ textDecoration: 'none', color: 'inherit' }} href="https://github.com/MakkDev" target="_blank" className="topListItem">GITHUB</a>
-                    <li onClick={handleSignOut} className="topListItem">SIGN OUT</li>
-                    
+                    <li onClick={handleSignOut} className="topListItem">SIGN OUT</li>                
                 </>) : (
                     <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }} className="topListItem">LOGIN</Link>)
                 }

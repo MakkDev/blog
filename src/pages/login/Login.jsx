@@ -56,10 +56,7 @@ export default function Login() {
             {auth.currentUser ? <div> <Blog /> </div> : <>
                 {registering ? (<> <h1> Registering! </h1>
                     Email:
-                    <input onKeyPress= {(event) => {
-            if (event.key === '13') {
-              console.log('Enter key pressed');            }
-    }} value={email} onChange={handleEmailChange} className="login" />
+                    <input value={email} onChange={handleEmailChange} className="login" />
                     Password:
                     <input type="password" value={password} onChange={handlePasswordChange} className="login" />
                     <Stack direction="row" spacing={2}>

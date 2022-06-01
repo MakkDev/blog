@@ -35,7 +35,7 @@ export default function Post(props) {
       <div className="postCats">
         <span className="postCat"> {props.postCategory} </span>
       </div>
-      <hr />
+      <br />
       <Link to='/single' className="postTitle" style={{ textDecoration: 'none', color: 'inherit' }} >{props.postTitle}</Link>
       <span className="postDate">{props.postDate}</span>
     </div>

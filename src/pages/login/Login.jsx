@@ -54,26 +54,26 @@ export default function Login() {
     return (
         <div className='loginPage'>
             {auth.currentUser ? <div> <Blog /> </div> : <>
-                {registering ? (<> <h1> Registering! </h1>
-                    Email:
+                {registering ? (<> <h1 style={{marginBottom:"0.5%", color:"#CCC"}}> Registering! </h1>
+                <span style={{marginTop:"0.5%",color:"#CCC"}}>Email:</span>  
                     <input value={email} onChange={handleEmailChange} className="login" />
-                    Password:
+                    <span style={{color:"#CCC"}}> Password: </span>  
                     <input type="password" value={password} onChange={handlePasswordChange} className="login" />
-                    <Stack direction="row" spacing={2}>
-                        <Button variant="contained" onClick={register}>Register</Button>
-                        <Button variant="contained" color="error" onClick={() => setRegistering(false)}> X</Button>
+                    <Stack sx={{mt:"1%"}} direction="row" spacing={2}>
+                        <Button sx={{fontSize:"70%"}} variant="contained" onClick={register}>Register</Button>
+                        <Button sx={{fontSize:"70%"}} variant="contained" color="error" onClick={() => setRegistering(false)}> X</Button>
                     </Stack>
 
 
-                </>) : (<> <h1>Welcome!</h1>
-                    Email:
+                </>) : (<> <h1 style={{marginBottom:"0.5%", color:"#CCC"}}>Welcome!</h1>
+                  <span style={{marginTop:"0.5%",color:"#CCC"}}>Email:</span>  
                     <input type="email" value={email} onChange={handleEmailChange} className="login" />
-                    Password:
+                  <span style={{color:"#CCC"}}> Password: </span>  
                     <input type="password" value={password} onChange={handlePasswordChange} className="login" />
-                    <Stack direction="row" spacing={2}> 
-                        <Button className="regbutton" variant="outlined" type="submit" onClick={signIn} >
+                    <Stack sx={{mt:"1%"}} direction="row" spacing={2}> 
+                        <Button sx={{fontSize:"70%"}} variant="outlined" type="submit" onClick={signIn} >
                         Login </Button>
-                        <Button className="regbutton" variant="contained" onClick={() => setRegistering(true)}>
+                        <Button sx={{fontSize:"70%"}} variant="contained" onClick={() => setRegistering(true)}>
                         Register </Button>
                     </Stack>
                 </>

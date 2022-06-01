@@ -19,18 +19,20 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    
+    margin-right: 18%;
 }
 
 .sidebarListItem{
-margin: 5px;
-color: lightcoral;
+margin-bottom: 12px;
+margin-top: 3px;
+color: #53c28b;
+text-align: center;
 
 
 }
 
 .sidebarTitle{
-    margin: 10px;
+    margin: 9px;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     font-size: 15px;
@@ -38,19 +40,22 @@ color: lightcoral;
     font-family: 'Varela Round';
     width: 80%;
     text-align: center;
+    color:#CCC
 
 }
 
 .sidebarListTitle{
     margin: 5px;
+    color:#CCC
 }
 
 .sidebarDesc{
-    margin: 10px;
+    margin-top: 10px;
     font-family: Open Sans;
     font-weight: 500;
     text-align: center;
     font-size: 14px;
+    color:#CCC
 }
 
 .sidebarItem > img {

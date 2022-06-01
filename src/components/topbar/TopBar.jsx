@@ -48,8 +48,6 @@ export default function TopBar() {
         </div>
         <div className="topRight">
             <img className="topRightImg" src={url} />
-            <i className="topSearchIcon fas fa-search"></i>
-
         </div>
     </div>
 

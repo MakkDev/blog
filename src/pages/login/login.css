@@ -1,10 +1,18 @@
 .login{
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    margin: 5px;
+    margin: 10px;
+    align-items: center;
 }
 .loginPage{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-left: 10px;
+    font-size: 200%;
 }
 .logbutton{
     margin-left: 10px;

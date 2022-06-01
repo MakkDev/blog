@@ -2,8 +2,7 @@
     display: flex;
     width: 385px;
     margin: 25px 25px 40px 25px;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 
 .postImg{
@@ -17,12 +16,13 @@
     flex-direction: column;
     align-items: center;
     margin: 10px;
+    color:#CCC
 
 }
 
 .postCats{
 font-size: 14px;
-color: lightcoral;
+color: #53c28b;
 font-weight: 500;
 text-align: center;
 line-height: 1.6;
@@ -41,7 +41,7 @@ margin: 5px;
 
 .postTitle{
     font-size: 24px;
-    margin: 5px;
+    margin: 0px;
     font-family: Open Sans;
     font-weight: 600;
     text-align: center;
@@ -58,6 +58,8 @@ margin: 5px;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     margin-top: 15px;
+    color:#CCC;
+    text-align: center
 }
 
 @media (max-width:1226px) {

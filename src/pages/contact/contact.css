@@ -1,14 +1,17 @@
-.write{
-    margin: 20px;
+.write1{
     padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.writeFormGroup{
-    margin-left: 50px;
+.writeFormGroup1{
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+    flex-direction: column;
 }
 
 .writeIcon{
@@ -21,23 +24,25 @@
     justify-content: center;
 }
 
-.textInput{
+.textInput1{
     border: none;
     margin-top: 20px;
     width: 600px;
     height: 300px;
+    background-color: #CCC;
 }
 
-.textInputTitle{
+.textInputTitle1{
     border: none;
     margin: 1px;
     width: 570px;
     height: 40px;
-    margin-left: 5px;
+    border-radius: 3%;
+    background-color: #CCC;
     font-size: 30px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.textInputTitle:focus{
+.textInputTitle1:focus{
     border: none;
     outline: none;
 }

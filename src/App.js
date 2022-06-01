@@ -11,6 +11,7 @@ import {useContext, useState} from 'react';
 import { urlContext, blogUrlContext } from "./context";
 import VideosPage from "./pages/videosPage/VideosPage";
 import Contact from "./pages/contact/Contact";
+import NewTopbar from "./components/NewTopbar";
 
 
 
@@ -23,7 +24,7 @@ function App() {
     <>
       <blogUrlContext.Provider value={{blogUrl, setBlogUrl}}> 
       <urlContext.Provider value={{url, setUrl}}> 
-      <TopBar />
+      <NewTopbar />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/blog" element={<Blog/>} />
@@ -33,6 +34,7 @@ function App() {
         <Route path="/profile" element={<Profile/>} />
         <Route path="/videos" element={<VideosPage/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/newtopbar" element={<NewTopbar/>} />
       </Routes>
       </urlContext.Provider>
       </blogUrlContext.Provider>

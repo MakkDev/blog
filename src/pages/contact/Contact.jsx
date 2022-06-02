@@ -20,7 +20,7 @@ export default function Contact() {
                     <textarea className='textInput1' placeholder="How Can We Help You?" type="text"></textarea>
                                   
                 </div>
-                <Button sx={{fontSize:"130%"}} onClick={() => {alert("Successfully Submitted!")}} color="success" variant="contained" > Submit </Button>
+                <Button sx={{fontSize:"130%"}} onClick={() => {navigate("/"); alert("Successfully Submitted!")}} color="success" variant="contained" > Submit </Button>
                 
                 
             

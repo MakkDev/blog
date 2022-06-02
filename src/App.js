@@ -34,7 +34,6 @@ function App() {
         <Route path="/profile" element={<Profile/>} />
         <Route path="/videos" element={<VideosPage/>} />
         <Route path="/contact" element={<Contact/>} />
-        <Route path="/newtopbar" element={<NewTopbar/>} />
       </Routes>
       </urlContext.Provider>
       </blogUrlContext.Provider>

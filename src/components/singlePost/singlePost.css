@@ -28,6 +28,7 @@
     margin: 20px;
     font-family: 'Cardo', serif;
     font-size: 50px;
+    color: #dae0e0;
 }
 
 .singlePostInfo{
@@ -41,6 +42,8 @@
 
 .singlePostAuthor{
 margin-right: 10px;
+color: #dae0e0;
+
 }
 
 .singlePostDate{
@@ -75,6 +78,7 @@ margin-right: 10px;
 .singlePostFirstParagraph{
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
+    color: #dae0e0;
     
 }
 
@@ -87,6 +91,8 @@ margin-right: 10px;
 .singlePostOtherParagraphs{
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
+    color: #dae0e0;
+
     
 }
 

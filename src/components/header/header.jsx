@@ -1,10 +1,12 @@
 import { storage } from "../../firebase";
 import "./header.css"
+import HeaderCover from '../../images/HeaderCover.gif'
+
 
 export default function Header() {
     return <div className='header'>
         <div className="headerTitles">
-            <img className="headerImg" src="https://i.ibb.co/GR0txwX/Crypto-Blog-Cover-1.gif" />
+            <img className="headerImg" src={HeaderCover} />
         </div>
     </div>;   
 } 

@@ -1,9 +1,11 @@
 import "./sidebar.css"
+import greenBG from '../../images/greenBG.png'
+
 export default function Sidebar() {
     return <div className="sidebar">
         <div className="sidebarItem">
             <span className="sidebarTitle"> ABOUT US</span>
-            <img className="sidebarImg" src="https://i.ibb.co/xM7x6qC/greenBG.png" />
+            <img className="sidebarImg" src={greenBG} />
             <p className="sidebarDesc">We are a group of blockchain enthusiasts educating the world on Crypto, DeFi, and all things blockchain tech related!</p>
         </div>
         <div className="sidebarItem">

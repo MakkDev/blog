@@ -1,8 +1,9 @@
 import { AppBar, Toolbar, CardMedia, Box, Card, CardContent, Container, Button } from '@mui/material'
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react'
+import MakkTalksLogo from "../images/MakkTalksLogo.png"
 import { Link } from 'react-router-dom'
-import { auth } from '../firebase'
+import { auth } from '../firebase' 
 
 export default function NewTopbar() {
 
@@ -23,24 +24,24 @@ export default function NewTopbar() {
             <AppBar sx={{position:"relative", backgroundColor: "#53c28b" }}> 
             <Toolbar >
             <Box sx={{display:'flex', flex:"1", justifyContent:"center", alignItems:"center",}}>
-                <img style={{ marginLeft: "2%", width: '70px', }} src="https://i.ibb.co/LpJWSHL/Copy-of-CS-Logo-NO-LINES.png" />
-                <Box sx={{  ml:"3%", mr:"1%"}}>
+                <img style={{  width: '9.6rem', }} src={MakkTalksLogo} />
+                {/* <Box sx={{  ml:"3%", mr:"1%"}}>
                 <a style={{ textDecoration: 'none', color: "inherit" }} href="https://www.instagram.com/makk.eth/" target="_blank"> <i className="topIcon fab fa-instagram-square" /> </a>
                 <a style={{ textDecoration: 'none', color: 'inherit' }} href="https://www.youtube.com/channel/UCEnP8E_-fWRKPGxp48dDUkg" target="_blank"> <i className="topIcon fab fa-youtube-square"></i> </a>
                 <a style={{ textDecoration: 'none', color: 'inherit' }} href="https://github.com/MakkDev" target="_blank"> <i className="topIcon fab fa-github-square"></i> </a>
-            </Box>
+            </Box> */}
 
     
         <Box sx={{display:"flex", flex:"1", alignItems:"center", justifyContent:"center",}} >          
-                <Button href='/' sx={{mr:"3%", fontSize:"110%", borderRadius:"8px", textDecoration: 'none', color: '#1e1e1e', justifyContent:"center", "&:hover": {backgroundColor:"#3C8C64", filter: "drop-shadow(0 0 0.5rem black)"} }} >HOME</Button>
-                <Button href='/blog' sx={{mr:"3%", fontSize:"110%", borderRadius:"8px", textDecoration: 'none', color: '#1e1e1e', justifyContent:"center", "&:hover": {backgroundColor:"#3C8C64", filter: "drop-shadow(0 0 0.5rem black)"} }} >BLOG</Button>
-                <Button href='/videos' sx={{mr:"3%", fontSize:"110%", px:"10px", borderRadius:"8px", textDecoration: 'none', color: '#1e1e1e', justifyContent:"center", "&:hover": {backgroundColor:"#3C8C64", filter: "drop-shadow(0 0 0.5rem black)"} }} >VIDEOS</Button>
-                <Button href='/contact' sx={{mr:"3%", fontSize:"110%", px:"13px", borderRadius:"8px", textDecoration: 'none', color:"#1e1e1e", justifyContent:"center", "&:hover": {backgroundColor:"#3C8C64", filter: "drop-shadow(0 0 0.5rem black)"} }} >CONTACT</Button>
-                {auth.currentUser ? (<>
+                <Button href='/' sx={{mr:"3%", fontWeight:"600", fontFamily:"Montserrat, sans-serif", fontSize:"110%", px:"1rem", borderRadius:"1.9rem", textDecoration: 'none', color:"#1e1e1e", justifyContent:"center", backgroundColor:"#5AA882", "&:hover": {backgroundColor:"#4EB683", color: '#1e1e1e', filter: "drop-shadow(0 0 0.2rem black)"} }} >Home</Button>
+                <Button href='/blog' sx={{mr:"3%", fontWeight:"600", fontFamily:"Montserrat, sans-serif", fontSize:"110%", px:"1rem", borderRadius:"1.9rem", textDecoration: 'none', color:"#1e1e1e", justifyContent:"center", backgroundColor:"#5AA882", "&:hover": {backgroundColor:"#4EB683", color: '#1e1e1e', filter: "drop-shadow(0 0 0.2rem black)"} }} >Blog</Button>
+                <Button href='/videos' sx={{mr:"3%", fontWeight:"600", fontFamily:"Montserrat, sans-serif", fontSize:"110%", px:"1rem", borderRadius:"1.9rem", textDecoration: 'none', color:"#1e1e1e", justifyContent:"center", backgroundColor:"#5AA882", "&:hover": {backgroundColor:"#4EB683", color: '#1e1e1e', filter: "drop-shadow(0 0 0.2rem black)"} }} >Videos</Button>
+                <Button href='/contact' sx={{mr:"3%", fontWeight:"600", fontFamily:"Montserrat, sans-serif", fontSize:"110%", px:"1rem", borderRadius:"1.9rem", textDecoration: 'none', color:"#1e1e1e", justifyContent:"center", backgroundColor:"#5AA882", "&:hover": {backgroundColor:"#4EB683", color: '#1e1e1e', filter: "drop-shadow(0 0 0.2rem black)"} }} >Contact</Button>
+                {/* {auth.currentUser ? (<>
                     <li onClick={handleSignOut} >SIGN OUT</li>                
                 </>) : (
                     <Button href="/login" sx={{mr:"3%", fontSize:"110%", borderRadius:"8px", textDecoration: 'none', color: '#1e1e1e', justifyContent:"center", "&:hover": {backgroundColor:"#3C8C64", filter: "drop-shadow(0 0 0.5rem black)"} }} >LOGIN</Button>)
-                }
+                } */}
                 </Box>
                 </Box>
             </Toolbar> </AppBar>

@@ -28,10 +28,12 @@ export default function Posts() {
   const blogThumbListRef = ref(storage, "/blogThumbnails/")
 
   useEffect(() => {
-    listAll(blogThumbListRef).then((response) => {
-      response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
+    listAll(blogThumbListRef)
+    .then((response) => {response.items
+    .forEach((item) => {getDownloadURL(item)
+    .then((url) => {
           setBlogUrl((prev) => [...prev, url]);
+          console.log(blogUrl);
         });
       });
     });
@@ -42,12 +44,11 @@ export default function Posts() {
   <div className="posts">
     
     {postLists.map((post) => {
-        return ( <div> <Post
+        return ( <div key={post.title}> <Post
         postTitle = {post.title}
         postDate ={post.postDate}
         postCategory = {post.postCategory}
-        postThumbnail = {blogUrl.map((url) => { return <img className="postImg" src={url} /> 
-      })}
+        postThumbnail = {post.blogUrl}
         firstParagraph ={post.postText1}
         secondParagraph ={post.postText2}
         thirdParagraph ={post.postText3}

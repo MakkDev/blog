@@ -28,7 +28,9 @@ export default function Post(props) {
 
   return <div className="post">
     
-   <a href='/single/1'> <img className="postImg" src={"/images/blogHotvsColdthumbnail.png"} /> 
+   {/* <a href='/single/1'> <img className="postImg" src={"/images/blogHotvsColdthumbnail.png"} /> 
+</a>     */}
+   <a href='/single/1'> <img className="postImg" src={props.postThumbnail} /> 
 </a>    
 
     <div className="postInfo">

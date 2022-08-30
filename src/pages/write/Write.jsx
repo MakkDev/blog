@@ -16,11 +16,9 @@ export default function Write() {
     const [postText3, setPostText3] = useState("");
     const [postDate, setPostDate] = useState("");
     const [postCategory, setPostCategory] = useState("");
-
-    const [imageUpload, setImageUpload] =  useState(null);
-    const [blogUrl, setBlogUrl] = useState([]);
-
-
+    const [imageObject, setImageObject] =  useState(null);
+    const [blogUrl, setBlogUrl] = useState("");
+    const [imageUploaded, setImageUploaded] = useState(false);
     
    let navigate = useNavigate();
     
@@ -29,22 +27,24 @@ export default function Write() {
 
    const handleBlogThumbnail = (e) => {
     if (e.target.files[0]) {
-        setImageUpload(e.target.files[0])
+        setImageObject(e.target.files[0])
+        setImageUploaded(true)
     }
 }
 
-   const handleBlogSubmit = () => {
-    uploadBytes(blogThumbnailRef, imageUpload).then(() => {
-        getDownloadURL(blogThumbnailRef).then((blogUrl) => {
-            setBlogUrl(blogUrl);
-        }); setImageUpload(null)
+   const handleThumbnailSubmit = () => {
+    uploadBytes(blogThumbnailRef, imageObject)
+    .then(() => { getDownloadURL(blogThumbnailRef)
+    .then( url => {setBlogUrl(url);}); 
+    setImageObject(null)
     })
 }
 
     const createPost = async () => {
         await addDoc(singleCollectionRef, 
-            {title, postText1, postText2, postText3, postDate, postCategory, });
-        navigate("/");
+            {title, postText1, postText2, postText3, postDate, postCategory, blogUrl });
+         navigate("/");
+         setImageUploaded(false)
     };
 
     return (
@@ -54,24 +54,25 @@ export default function Write() {
                     <label htmlFor="fileInput">
                         <i className="writeIcon fa-solid fa-plus"></i>
                     </label>
-                    <button onClick={handleBlogSubmit}> Submit </button>   
+                    <button className='submitButton' onClick={handleThumbnailSubmit}> {!imageUploaded ? "Submit Image" : "Image Uploaded!"} </button>   
                     <input  id='fileInput' type="file" style={{ display: "none" }} onChange={handleBlogThumbnail} />
                     <input className='textInputTitle' placeholder='Title' type="text" autoFocus={true} 
                         onChange={(event) => {setTitle(event.target.value); }} />
                 </div>
-                <div className='writeFormGroup'>
-                    <textarea className='textInput1' placeholder="Paragraph 1" type="text" 
+                <div className='paragraphs'> 
+                <div className='paragraph1'>
+                    <textarea className='textInput' placeholder="Paragraph 1" type="text" 
                         onChange={(event) => {setPostText1(event.target.value);}}></textarea>               
                 </div>
-                <div className='writeFormGroup'>
-                    <textarea className='textInput1' placeholder="Paragraph 2" type="text" 
+                <div className='paragraph2'>
+                    <textarea className='textInput' placeholder="Paragraph 2" type="text" 
                         onChange={(event) => {setPostText2(event.target.value);}}></textarea>               
                 </div>
-                <div className='writeFormGroup'>
-                    <textarea className='textInput1' placeholder="Paragraph 3" type="text" 
+                <div className='paragraph3'>
+                    <textarea className='textInput' placeholder="Paragraph 3" type="text" 
                         onChange={(event) => {setPostText3(event.target.value);}}></textarea>               
                 </div>
-
+                </div>
 
                 <input type="text" placeholder='Category' onChange={(event) => {setPostCategory(event.target.value);}}/>
                 <br/>
@@ -79,7 +80,7 @@ export default function Write() {
                 <input type="date" onChange={(event) => {setPostDate(event.target.value);}}/>
                 <br/>
                 <br/> 
-                <button onClick={createPost}> Submit </button>   
+                <button className='submitButton' onClick={createPost}> Submit </button>   
             
         </div>
         

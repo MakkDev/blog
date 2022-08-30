@@ -18,10 +18,10 @@ export default function Blog() {
     <b> New Post </b>
     </button>) : ("") }  */}
     
-    {/* <button onClick={() => navigate("/write")} className="button">
-    <i class="buttonIcon fa-solid fa-pen-to-square"></i>
+    <button onClick={() => navigate("/write")} className="button">
+    <i className="buttonIcon fa-solid fa-pen-to-square"></i>
     <b> New Post </b>
-    </button> */}
+    </button>
   
   <div className="blog">
     

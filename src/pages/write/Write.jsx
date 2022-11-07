@@ -27,8 +27,7 @@ export default function Write() {
 
    const handleBlogThumbnail = (e) => {
     if (e.target.files[0]) {
-        setImageObject(e.target.files[0])
-        setImageUploaded(true)
+        setImageObject(e.target.files[0])        
     }
 }
 
@@ -37,6 +36,7 @@ export default function Write() {
     .then(() => { getDownloadURL(blogThumbnailRef)
     .then( url => {setBlogUrl(url);}); 
     setImageObject(null)
+    setImageUploaded(true)
     })
 }
 

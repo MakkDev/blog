@@ -54,6 +54,7 @@
     font-size: 14px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     
 }
 
@@ -66,10 +67,10 @@ color: #dae0e0;
 .singlePostDate{
     font-size: 1.5rem;
     font-family: Righteous;
-    color: gray;
+    color: #dae0e0;
     margin-bottom: 10px;
     margin-top: 5px;
-    align-self: center;
+    
     
 }
 
@@ -117,4 +118,19 @@ color: #dae0e0;
 .singlePostOtherParagraphs::first-letter{
     margin-left: 25px;
     
+}
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:#4cf8a2;
+    height: 3px;
+  }
+  .singlePostInfoContainer{
+    display: flex;
+  }
+.faceImg{
+    width: 30%;
+    border-radius: 15rem;
 }

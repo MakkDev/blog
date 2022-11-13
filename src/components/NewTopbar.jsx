@@ -21,7 +21,7 @@ export default function NewTopbar() {
 
     return (
         
-            <AppBar sx={{position:"relative", backgroundColor: "#53c28b" }}> 
+            <AppBar sx={{position:"sticky", backgroundColor: "#53c28b" }}> 
             <Toolbar >
             <Box sx={{display:'flex', flex:"1", justifyContent:"center", alignItems:"center",}}>
                 <img style={{  width: '9.6rem', }} src={MakkTalksLogo} />

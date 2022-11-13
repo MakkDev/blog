@@ -1,5 +1,5 @@
 import "./singlePost.css";
-
+import cartoonFace from "../../images/cartoonFaceFull.png";
 export default function SinglePost(props) {
     return (
         <div className="singlePost">
@@ -7,14 +7,6 @@ export default function SinglePost(props) {
                     {props.title}
                 </h1>
                 <img src={props.postThumbnail} alt="" className="singlePostThumbnail" />
-                <div className="singlePostInfo">
-                    <span className="singlePostAuthor">
-                        <b>Author: Abdullah Makkieh</b>
-                    </span>
-                    <span className="singlePostDate">
-                        {props.postDate}
-                    </span>
-                </div>
             <div className="singlePostWrapper">
                 <div className="singlePostEdit">
                 </div>
@@ -39,6 +31,18 @@ export default function SinglePost(props) {
                 <p className="singlePostOtherParagraphs">
                 {props.fourthParagraph}
                 </p>
+                <hr/>
+                <div className="singlePostInfoContainer">
+                    <img className="faceImg" src={cartoonFace}/> 
+                <div className="singlePostInfo">
+                    <span className="singlePostAuthor">
+                        <b> Written By Abdullah Makkieh</b>
+                    </span>
+                    <span className="singlePostDate">
+                        {props.postDate}
+                    </span>
+                </div>
+                </div>
             </div>
         </div>
     )

@@ -47,7 +47,7 @@ export default function Single(props) {
             postImg3={postData.postImg3}
             imgDesc1={postData.imgDesc1}
             imgDesc2={postData.imgDesc2}
-            imgDesc3={postData.imgDesc2}
+            imgDesc3={postData.imgDesc3}
           />
         </div> 
     </div>

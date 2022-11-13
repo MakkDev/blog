@@ -10,7 +10,6 @@ import { useContext, useEffect } from 'react';
 
 export default function Post(props) {
 
-  const blogThumbnailRef = ref(storage, `/blogThumbnails/` + v4()  + "-blog thumbnail")
   const {blogUrl, setBlogUrl} = useContext(blogUrlContext);
 
   const blogThumbListRef = ref(storage, "/blogThumbnails/")
@@ -28,9 +27,7 @@ export default function Post(props) {
 
   return <div className="post">
     
-   {/* <a href='/single/1'> <img className="postImg" src={"/images/blogHotvsColdthumbnail.png"} /> 
-</a>     */}
-   <a href='/single/1'> <img className="postImg" src={props.postThumbnail} /> 
+   <a> <img className="postImg" src={props.postThumbnail} /> 
 </a>    
 
     <div className="postInfo">
@@ -38,7 +35,7 @@ export default function Post(props) {
         <span className="postCat"> {props.postCategory} </span>
       </div>
       <br />
-      <Link to='/single' className="postTitle" style={{ textDecoration: 'none', color: 'inherit' }} >{props.postTitle}</Link>
+      <div className="postTitle" style={{ textDecoration: 'none', color: 'inherit' }} >{props.postTitle}</div>
       <span className="postDate">{props.postDate}</span>
     </div>
     <p className="postDesc">

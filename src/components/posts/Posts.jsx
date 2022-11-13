@@ -7,6 +7,7 @@ import "./posts.css"
 import { v4 } from "uuid";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
 import { blogUrlContext } from '../../context';
+import { Link } from "react-router-dom";
 
 export default function Posts() {
 
@@ -44,17 +45,18 @@ export default function Posts() {
   <div className="posts">
     
     {postLists.map((post) => {
-        return ( <div key={post.title}> <Post
+        return ( <Link style={{ textDecoration: 'none', color: 'inherit' }} to={`/blog/${post.id}`}> <div key={post.title}> 
+         <Post
         postTitle = {post.title}
         postDate ={post.postDate}
         postCategory = {post.postCategory}
-        postThumbnail = {post.blogUrl}
+        postThumbnail = {post.thumbnailUrl}
         firstParagraph ={post.postText1}
         secondParagraph ={post.postText2}
         thirdParagraph ={post.postText3}
         />
         
-        </div> )})}  
+        </div> </Link> )})}  
     
       
       </div> 

@@ -12,15 +12,16 @@ export default function Contact() {
 
   return (
     <>
-        <div className='write1'>
-            <Typography sx={{mb:"5%", fontSize:"40px"}} color="#CCC">Contact Crypto Simplified</Typography>
-                <div className='writeFormGroup1'>
-                    <input className='textInputTitle1' placeholder='Subject' type="text" autoFocus={true} />
+        <div className='container'>
+            <Typography sx={{mb:"5%", fontSize:"7rem", fontFamily: 'Cardo, serif'}} color="black">Contact Makk</Typography>
+                <div className='contact-info__container'>
+                    <input className='contact-info' placeholder='Name' type="text" autoFocus={true} />
+                    <input className='contact-info' placeholder='Email' type="text" autoFocus={true} />
                 
-                    <textarea className='textInput1' placeholder="How Can We Help You?" type="text"></textarea>
+                    <textarea className='textInput1' placeholder="Message..." type="text"></textarea>
                                   
                 </div>
-                <Button sx={{fontSize:"130%"}} onClick={() => {navigate("/"); alert("Successfully Submitted!")}} color="success" variant="contained" > Submit </Button>
+                <Button className='submitButton' sx={{fontSize:"130%", backgroundColor: "#45a179"}} onClick={() => {navigate("/"); alert("Successfully Submitted!")}} variant="contained" > Submit </Button>
                 
                 
             

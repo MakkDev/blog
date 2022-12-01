@@ -1,6 +1,10 @@
 import "./singlePost.css";
 import cartoonFace from "../../images/cartoonFaceFull.png";
+import { useState } from "react";
 export default function SinglePost(props) {
+
+    const [zoomed, setZoomed] = useState(false);
+
     return (
         <div className="singlePost">
             <h1 className="singlePostTitle">
@@ -25,7 +29,11 @@ export default function SinglePost(props) {
                 <p className="singlePostOtherParagraphs">
                 {props.thirdParagraph}
                 </p>
-                <img src={props.postImg3} className="singlePostImg" style={{display: props.postImg3 ? "unset" : "none"}}/>
+                <img onClick={() => setZoomed(zoomed => !zoomed)} 
+                    src={props.postImg3} 
+                    className={zoomed ? "full_screen" :"singlePostImg"} 
+                    style={{display: props.postImg3 ? "unset" : "none", cursor: zoomed ? "zoom-out" : "zoom-in"}}
+                />
                 <span className="imgDescription">{props.imgDesc3}</span>
                 <br/>
                 <p className="singlePostOtherParagraphs">

@@ -2,7 +2,7 @@
     display: flex;
     width: 385px;
     margin: 25px 25px 40px 25px;
-    flex-direction: column;    
+    flex-direction: column; 
 }
 
 .postImg{

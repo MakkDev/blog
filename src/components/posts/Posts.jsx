@@ -45,7 +45,9 @@ export default function Posts() {
   <div className="posts">
     
     {postLists.map((post) => {
-        return ( <Link style={{ textDecoration: 'none', color: 'inherit' }} to={`/blog/${post.id}`}> <div key={post.title}> 
+        return ( 
+        <div key={post.title}> 
+        <Link style={{ textDecoration: 'none', color: 'inherit' }} to={`/blog/${post.id}`}> 
          <Post
         postTitle = {post.title}
         postDate ={post.postDate}
@@ -56,7 +58,7 @@ export default function Posts() {
         thirdParagraph ={post.postText3}
         />
         
-        </div> </Link> )})}  
+        </Link> </div>  )})}  
     
       
       </div> 

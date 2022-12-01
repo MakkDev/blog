@@ -13,11 +13,6 @@ export default function Blog() {
 
   return <>
 
-    {/* { auth.currentUser.uid === "SuAGgsXWt7NhSrz4ZkWx2U8C6Ay2" ? (<button onClick={() => navigate("/write")} className="button">
-    <i class="buttonIcon fa-solid fa-pen-to-square"></i>
-    <b> New Post </b>
-    </button>) : ("") }  */}
-    
     {/* <button onClick={() => navigate("/write")} className="button">
     <i className="buttonIcon fa-solid fa-pen-to-square"></i>
     <b> New Post </b>
@@ -30,3 +25,7 @@ export default function Blog() {
       <Sidebar/> </div> 
      </> 
 }
+{/* { auth.currentUser.uid === "SuAGgsXWt7NhSrz4ZkWx2U8C6Ay2" ? (<button onClick={() => navigate("/write")} className="button">
+<i class="buttonIcon fa-solid fa-pen-to-square"></i>
+<b> New Post </b>
+</button>) : ("") }  */}

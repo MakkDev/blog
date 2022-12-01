@@ -14,7 +14,7 @@ export default function Sidebar() {
             <ul className="sidebarList">
                 <li className="sidebarListItem"> Traditional Tech</li>
                 <li className="sidebarListItem"> Blockchain Tech</li>
-                <li className="sidebarListItem"> Trading</li>
+                <li className="sidebarListItem"> Trading & Investing</li>
                 <li className="sidebarListItem"> Decentralized Finance</li>
             </ul>
         </div>

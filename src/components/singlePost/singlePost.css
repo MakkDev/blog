@@ -134,3 +134,10 @@ hr {
     width: 30%;
     border-radius: 15rem;
 }
+.full_screen {
+    width: 120%;
+    height: 180%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

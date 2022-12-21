@@ -1,18 +1,16 @@
-import Single from '../../pages/single/Single';
-import './post.css'
-import { Link } from 'react-router-dom';
-import { v4 } from 'uuid';
-import { ref, listAll, list, getDownloadURL } from 'firebase/storage';
-import { storage } from '../../firebase';
-import { blogUrlContext } from '../../context';
-import { useContext, useEffect } from 'react';
-
+import Single from "../../pages/single/Single";
+import "./post.css";
+import { Link } from "react-router-dom";
+import { v4 } from "uuid";
+import { ref, listAll, list, getDownloadURL } from "firebase/storage";
+import { storage } from "../../firebase";
+import { blogUrlContext } from "../../context";
+import { useContext, useEffect } from "react";
 
 export default function Post(props) {
+  const { blogUrl, setBlogUrl } = useContext(blogUrlContext);
 
-  const {blogUrl, setBlogUrl} = useContext(blogUrlContext);
-
-  const blogThumbListRef = ref(storage, "/blogThumbnails/")
+  const blogThumbListRef = ref(storage, "/blogThumbnails/");
 
   useEffect(() => {
     listAll(blogThumbListRef).then((response) => {
@@ -24,22 +22,24 @@ export default function Post(props) {
     });
   }, []);
 
-
-  return <div className="post">
-    
-   <img className="postImg" src={props.postThumbnail} /> 
-   
-
-    <div className="postInfo">
-      <div className="postCats">
-        <span className="postCat"> {props.postCategory} </span>
+  return (
+    <div className="post">
+      <div
+        className="postTitle"
+        style={{ textDecoration: "none", color: "#ddd", marginBottom: "20px" }}
+      >
+        {props.postTitle}
       </div>
-      <br />
-      <div className="postTitle" style={{ textDecoration: 'none', color: 'inherit' }} >{props.postTitle}</div>
-      <span className="postDate">{props.postDate}</span>
+      <img className="postImg" src={props.postThumbnail} />
+
+      <div className="postInfo">
+        <div className="postCats">
+          <span className="postCat"> {props.postCategory} </span>
+        </div>
+        <br />
+        <span className="postDate">{props.postDate}</span>
+      </div>
+      <p className="postDesc">{props.firstParagraph}</p>
     </div>
-    <p className="postDesc">
-     {props.firstParagraph}
-    </p>
-  </div>;
+  );
 }

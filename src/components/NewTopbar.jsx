@@ -61,7 +61,8 @@ export default function NewTopbar() {
             }}
           >
             {headers.map((header) => {
-              const pageLink = `/${header.toLowerCase()}`;
+              const pageLink =
+                header === "HOME" ? "/" : `/${header.toLowerCase()}`;
 
               return (
                 <Button

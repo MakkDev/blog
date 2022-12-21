@@ -32,7 +32,7 @@ export default function NewTopbar() {
   return (
     <AppBar
       sx={{
-        position: "sticky",
+        position: "static",
         backgroundColor: "#53c28b",
       }}
     >
@@ -61,10 +61,12 @@ export default function NewTopbar() {
             }}
           >
             {headers.map((header) => {
+              const pageLink = `/${header.toLowerCase()}`;
+
               return (
                 <Button
                   size="small"
-                  href="/"
+                  href={pageLink}
                   sx={{
                     mr: "3%",
                     fontWeight: "600",
